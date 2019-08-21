@@ -3,17 +3,21 @@ function timeConversion(s){
   let time = s.split(a)
   let time2 = time[0].split(`:`)
   let change = parseInt(time2[0])
+  let fix = ``
 
-  
   if(/pm/ig.test(s) 
     && time2[0]!==`12`) change +=12
   if(/am/ig.test(s)
-    && time2[0]===`12`) change -=12 
-  
-  let string = change.toString()
-  time2[0] = string
+    && time2[0] === `12`) change -= 12
 
-  return time2.join(`:`)
+
+  let string = change.toString()
+  if(change<10) fix += `0`
+
+  time2[0] = fix.concat(string)
+
+  
+  console.log(time2.join(`:`))
 }
 
-timeConversion(`07:05:45AM`)
+timeConversion(`09:00:00AM`)
