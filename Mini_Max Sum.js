@@ -19,4 +19,5 @@ function minMax2(arr){
 }
 
 
+
 minMax2([1,3,5,7,9])
