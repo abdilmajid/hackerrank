@@ -1,19 +1,17 @@
-function pan(str){
+function pangrams(s){
   let obj = {}
-  // let loCase = str.toLowerCase()
-  let otherChar = str.match(/[a-z]/gi).join('').toLowerCase()
+  let otherChar = s.match(/[a-z]/gi).join('').toLowerCase()
   
-
   for(let char of otherChar){
     if(obj[char]) obj[char]++
     else obj[char] = 1
   }
 
-  if(Object.keys(obj).length===26) return `panagram`
+  if(Object.keys(obj).length===26) return `pangram`
   else return `not pangram`
 }
 
 
 
 
-console.log(pan(`We promptly  judged antique. ivory buckles for the prize`))
+console.log(pangrams(`We promptly  judged antique. ivory buckles for the prize`))
