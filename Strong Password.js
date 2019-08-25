@@ -12,7 +12,7 @@ function minimumNumber(n, password) {
 
 
 
-  // return Math.max(r,6-n)
+  return Math.max(r,6-n)
 
 }
 
