@@ -3,7 +3,7 @@ function minimumNumber(n, password) {
   let minDigit = /(?=.*\d)./g
   let minLower = /(?=.*[a-z])./g
   let minUpper = /(?=.*[A-Z])./g
-  let minSpecial = /(?=.*[!@#$%^&*()-+])./g
+  let minSpecial = /(?=.*[!@#$%^&*()\-+])./g
   
   if(!minDigit.test(password)) r++
   if(!minLower.test(password)) r++
@@ -12,7 +12,7 @@ function minimumNumber(n, password) {
 
 
 
-  return Math.max(r,6-n)
+  // return Math.max(r,6-n)
 
 }
 
@@ -20,4 +20,4 @@ function minimumNumber(n, password) {
 
 
 
-console.log(minimumNumber(11,`#HackerRank`))
+console.log(minimumNumber(7,`AUzs-nV`))
