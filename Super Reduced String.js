@@ -9,5 +9,5 @@ function superReducedString(s) {
     return superReducedString(newStr)
   }
   
-console.log(superReducedString(`aa`))
+// console.log(superReducedString(`aa`))
 console.log(superReducedString(`aaabccddd`))

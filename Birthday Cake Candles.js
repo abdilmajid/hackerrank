@@ -17,11 +17,11 @@ function birthdayCakeCandles(ar){
 }
 
 // Better solution
-function bCake(ar){  
-  let maxNum = Math.max(...ar)
-  let a = ar.filter(e => e===maxNum);
-  return a.length
-}
+// function bCake(ar){  
+//   let maxNum = Math.max(...ar)
+//   let a = ar.filter(e => e===maxNum);
+//   return a.length
+// }
 
 console.log(birthdayCakeCandles([4,4,1,3,5,1,4,5,5]))
-bCake([4,4,1,3,2,1,4,5])
+// console.log(bCake([4,4,1,3,5,1,4,5,5]))
