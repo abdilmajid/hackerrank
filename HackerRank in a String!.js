@@ -1,21 +1,19 @@
-function h(str){
+function hackerrankInString(s){
   let word = `hackerrank`
-  let count = 0
-  
-  for(let char in word){
-    if(str[char]===word[count]){
-      count++
-      console.log(char)
-      console.log(count)
+  let word1 = word.split('')
+
+  for(let i=0;i<=s.length;i++){
+    if(s[i]===word1[0]){
+      word1.shift()
     }
   }
-  if(count<5) return `NO`
-  else return `Yes`
 
+  if(word1.length>=1) return `NO`
+  else return `YES`
 
 }
 
-console.log(h(`hhaacckkekraraannk`))
+console.log(hackerrankInString(`rhbaasdndfsdskgbfefdbrsdfhuyatrjtcrtyytktjjt`))
 
 
 
