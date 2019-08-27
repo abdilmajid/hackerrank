@@ -1,6 +1,7 @@
 const arr = [5,5,7,7,8,8,8,8,8,10,11,12,13,40]
 const arr2 = [2,2]
 
+// Solution1
 function ar(arr,target){
   let start = arr.indexOf(target)
   // let count = 0
@@ -17,8 +18,8 @@ function ar(arr,target){
     }
   }
   return [start,last]
-
 }
+
 
 console.log(ar(arr,2))
 
