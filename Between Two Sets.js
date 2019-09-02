@@ -1,96 +1,64 @@
+function getTotalX(a, b){
+  a.sort((a,b) => a-b)
+  b.sort((a,b) => a-b)
 
-// Assuming arrays not sorted
-function getTotalX(a, b) {
-  a.sort((a, b) => a - b)
-  b.sort((a, b) => a - b)
-  let count = 0
-  let arr = []
-  let a1 = 0
-  let b1 = 0
-
-// Finding Greatest common Multiple of two numbers
-function gcm(num1,num2){
-  while(num2){
-    let num = num2
-    num2 = num1%num2;
-    num1 = num
+  let c = []
+  let d = []
+  for(let i=0;i<=100;i++){
+    if(i>=a[a.length-1] && i<=b[0]){
+      c.push(i)
+    }
   }
-  return num1
-}
 
-function gcmPlus(nums){
-  let x = nums[0]
-  for(let i=1;i<nums.length;i++){
-    y = nums[i]
-    x = gcm(x,y)
+  let gcd = (arr) => {
+    let a = arr[0]
+    let b 
+    for(let i=1;i<arr.length;i++){
+      b = arr[i]
+      a = gcd_two(a,b)
+    }
+    return a
   }
-  return x
-}
 
-for(let i=0;i<=100;i++){
-  if(a.length<=1){
-    a1 = a[0]
+  let gcd_two = (x,y)=>{
+    while(y){
+      let t = y
+      y = x%y
+      x = t
+    }
+    return x
   }
-  else {
-    a1 = gcmPlus(a)
+
+  let lcm = () => {
+    let lgcd = gcd(a)
+    let max = Math.max[a]
+    let min = Math.min[a]
+    return (max*min)/lgcd
   }
-}
+  
 
+  maxA = lcm(a)
+  maxB = gcd(b)
 
-
-console.log(a1)
-
-}
-
-
-
-getTotalX([2],[16,32,96])
-
-// Finding Greatest common Multiple of two numbers
-function gcm(a,b){
-  while(b){
-    let num = b
-    b = a%b;
-    a = num
+  for(let i=0;i<=b[b.length-1];i++){
+    if(c[i]%maxA!==0) c.splice(i,1)
   }
-  return a
-}
 
-// Finding Greatest common Multiple of 2+numbers
-function gcmPlus(nums){
-  let x = nums[0]
-  for(let i=1;i<nums.length;i++){
-    y = nums[i]
-    x = gcm(x,y)
+  for(let i=0;i<=b[b.length-1];i++){
+  if(maxB%c[i]===0) d.push(c[i])
   }
-  return x
+
+  console.log(c)
+  console.log(maxA,maxB)
+  console.log(a)
+
+  // return d.length
+
 }
 
 
 
-
-
-// console.log(gcmPlus([30,20,12]))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(getTotalX([3,4],[24,48]))
 
 
 
